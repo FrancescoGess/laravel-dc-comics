@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Comic;
-
 use Illuminate\Database\Seeder;
 
 class ComicsSeeder extends Seeder

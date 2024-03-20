@@ -36,6 +36,8 @@ class ComicsController extends Controller
         $new_comic = new Comic();
         $new_comic->fill($form_data);
         $new_comic->save();
+
+        return redirect()->route('comics.show', ['comic'=> $new_comic->id]);
     }
 
     /**
@@ -43,7 +45,9 @@ class ComicsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $comics = Comic::findOrFail($id);
+
+        return view('pages.comics.show', compact('comics'));
     }
 
     /**

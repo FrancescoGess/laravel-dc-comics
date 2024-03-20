@@ -29,7 +29,9 @@
             <tbody>
                 @foreach ($comics as $item)
                 <tr class="">
-                    <td scope="row">{{$item->title}}</td>
+                    <td scope="row">
+                        <a href="{{ route('comics.show', $item->id) }}">
+                        {{$item->title}}</a></td>
                     <td>{{$item->description}}</td>
                     <td>{{$item->thumb}}</td>
                     <td>{{$item->price}}</td>

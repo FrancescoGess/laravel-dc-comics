@@ -9,8 +9,9 @@
 
    
     <div
-        class="table-responsive"
-    >
+        class="table-responsive">
+
+        <a href="{{ route('comics.create') }}"> Crea Comics </a>
         <table
             class="table table-primary"
         >

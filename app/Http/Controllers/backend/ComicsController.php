@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ComicStoreRequest;
+use App\Http\Requests\ComicUpdateRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -29,10 +31,10 @@ class ComicsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ComicStoreRequest $request)
     {
         // dd($request);
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $new_comic = new Comic();
         $new_comic->fill($form_data);
         $new_comic->save();
@@ -55,20 +57,21 @@ class ComicsController extends Controller
      */
     public function edit(string $id)
     {
-        $comics = Comic::findOrFail($id);
-        return view('pages.comics.edit', compact('comics'));
+        $comic = Comic::findOrFail($id);
+        return view('pages.comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ComicUpdateRequest $request, string $id)
     {
-        $form_data = $request->all();
+        //   $form_data = $request->();
 
+        // dd('ciao');
         $comics = Comic::findOrFail($id);
 
-        $comics->update($form_data);
+         $comics->update($request->validated());
 
         return redirect()->route('comics.show', ['comic' => $comics->id]);
     }
@@ -85,18 +88,5 @@ class ComicsController extends Controller
         return redirect()->route('comics.index');
     }
 
-    public function validate(Request $request, array $rules, array $messages = [], array $attributes = [])
-    {
-        $request->validate([
-
-            'title' => 'required',
-            'description' => 'required',
-            'thumb' => 'required',
-            'price' => 'required',
-            'series' => 'required',
-            'sale_date' => 'required',
-            'type' => 'required'
-            
-        ]);
-    }
+   
 }

@@ -21,4 +21,8 @@ class Comic extends Model
         'sale_date',
         'type'
     ];
+
+    protected $casts = [
+        'price' => 'decimal:2'
+    ];
 }

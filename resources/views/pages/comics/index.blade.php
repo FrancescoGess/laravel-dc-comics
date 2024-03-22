@@ -10,7 +10,7 @@
 
         <div class="table-responsive">
 
-            @if($error->any())
+            {{-- @if($error->any())
             <div class="alert alert-danger">
                 <ul>
                     @foreach($errors -> all() as error)
@@ -20,9 +20,9 @@
                     @endforeach
                 </ul>
 
+                @endif --}}
             </div>
                 
-            @endif
 
             <a href="{{ route('comics.create') }}"> Crea Comics </a>
             <table class="table table-primary">

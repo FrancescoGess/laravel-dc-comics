@@ -4,13 +4,13 @@
 
 @section('main')
 
-<h2>
-    {{ $comics->title }}
-</h2>
+    <h2>
+        {{ $comics->title }}
+    </h2>
 
-<p>
-    {{ $comics->description }}
-</p>
+    <p>
+        {{ $comics->description }}
+    </p>
 
 
 @endsection

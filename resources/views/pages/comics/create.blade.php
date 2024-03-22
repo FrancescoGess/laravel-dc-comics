@@ -12,12 +12,7 @@
 
                 <div class="mb-3">
                     <label for="title" class="form-label">titolo</label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        name="title"
-                        id="title"
-                    />
+                    <input type="text" class="form-control" name="title" id="title" />
                 </div>
 
                 <div class="mb-3">
@@ -28,58 +23,30 @@
 
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Immagine</label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        name="thumb"
-                        id="thumb"
-                    />
+                    <input type="text" class="form-control" name="thumb" id="thumb" />
                 </div>
 
                 <div class="mb-3">
                     <label for="image" class="form-label">Prezzo</label>
-                    <input
-                        type="number"
-                        class="form-control"
-                        name="price"
-                        id="price"
-                    />
+                    <input type="number" class="form-control" name="price" id="price" />
                 </div>
 
                 <div class="mb-3">
                     <label for="series" class="form-label">Serie</label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        name="series"
-                        id="series"
-                    />
+                    <input type="text" class="form-control" name="series" id="series" />
                 </div>
 
                 <div class="mb-3">
                     <label for="sale_date" class="form-label">Data</label>
-                    <input
-                        type="date"
-                        class="form-control"
-                        name="sale_date"
-                        id="sale_date"
-                    />
+                    <input type="date" class="form-control" name="sale_date" id="sale_date" />
                 </div>
 
                 <div class="mb-3">
                     <label for="type" class="form-label">Tipo</label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        name="type"
-                        id="type"
-                    />
+                    <input type="text" class="form-control" name="type" id="type" />
                 </div>
 
-                <button
-                    type="submit"
-                    class="btn btn-primary"
-                >
+                <button type="submit" class="btn btn-primary">
                     Crea
                 </button>
 

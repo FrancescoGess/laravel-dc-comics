@@ -21,5 +21,4 @@ class Comic extends Model
         'sale_date',
         'type'
     ];
-
 }

@@ -10,6 +10,20 @@
 
         <div class="table-responsive">
 
+            @if($error->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors -> all() as error)
+                        <li>
+                            {{ $error }}
+                        </li>
+                    @endforeach
+                </ul>
+
+            </div>
+                
+            @endif
+
             <a href="{{ route('comics.create') }}"> Crea Comics </a>
             <table class="table table-primary">
                 <thead>
@@ -54,11 +68,6 @@
                             </td>
                         </tr>
                     @endforeach
-                    <tr class="">
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
